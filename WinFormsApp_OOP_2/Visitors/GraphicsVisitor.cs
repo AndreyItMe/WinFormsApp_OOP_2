@@ -18,7 +18,7 @@ namespace WinFormsApp_OOP_2.Visitors
         private Graphics graphics;
 
         //Pen pen = new Pen(Color.FromArgb(255, Color.FromArgb(Convert.ToInt32(rand.Next(0x1000000)))));
-        Pen pen = new Pen(Color.Blue);
+        //Pen pen = new Pen(Color.Blue);
 
         public GraphicsVisitor(Graphics graphics)
         {
@@ -39,7 +39,7 @@ namespace WinFormsApp_OOP_2.Visitors
 
             graphics.DrawEllipse(new Pen(Color.Black), x, y, diameter, diameter);
         }
-
+/*
         public void VisitQuadrilateral(Quadrilateral quadrilateral)
         {
             int x1 = quadrilateral.StartPoint.X;
@@ -56,7 +56,7 @@ namespace WinFormsApp_OOP_2.Visitors
             };
             graphics.DrawPolygon(new Pen(Color.Black), vertices);
         }
-
+*/
         public void VisitRectangle(WinFormsApp_OOP_1.GraphicsFigures.Figures.Rectangle rectangle)
         {
             //pen = new Pen(Color.FromArgb(255, Color.FromArgb(Convert.ToInt32(rand.Next(0x1000000)))));

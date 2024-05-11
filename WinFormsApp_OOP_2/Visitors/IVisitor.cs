@@ -17,7 +17,7 @@ namespace WinFormsApp_OOP_2.Visitors
         void VisitEllipse(Ellipse ellipse);
         void VisitLine(Line line);
         void VisitRectangle(Rectangle rectangle);
-        void VisitQuadrilateral(Quadrilateral quadrilateral);
+        //void VisitQuadrilateral(Quadrilateral quadrilateral);
         void VisitSquare(Square square);
         void VisitPoint(Point point);
         void VisitCircle(Circle circle);

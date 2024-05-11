@@ -9,6 +9,7 @@ using WinFormsApp_OOP_2.Visitors;
 namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
 {
     //internal class Ellipse : Point, IFigure
+    [Serializable]
     public class Ellipse : Point, IFigure
     {
         public new System.Drawing.Point StartPoint { get; set; }
@@ -26,6 +27,10 @@ namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
         {
 
             visitor.VisitEllipse(this);
+        }
+        public override string ToString()
+        {
+            return $"Ellipse ({StartPoint}, {EndPoint})";
         }
     }
 }

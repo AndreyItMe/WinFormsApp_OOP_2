@@ -8,6 +8,7 @@ using WinFormsApp_OOP_2.Visitors;
 namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
 {
     //internal class Square : Rectangle, IFigure
+    [Serializable]
     public class Square : Rectangle, IFigure
     {
         public Square() { }
@@ -24,6 +25,10 @@ namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
         public new void Accept(IVisitor visitor)
         {
             visitor.VisitSquare(this);
+        }
+        public override string ToString()
+        {
+            return $"Square ({StartPoint}, {EndPoint})";
         }
     }
 

@@ -8,6 +8,7 @@ using WinFormsApp_OOP_2.Visitors;
 namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
 {
     //internal class Point : IFigure
+    [Serializable]
     public class Point : IFigure
     {
         public Point() { }
@@ -37,6 +38,10 @@ namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
         public void Accept(IVisitor visitor)
         {
             visitor.VisitPoint(this);
+        }
+        public override string ToString()
+        {
+            return $"Point ({StartPoint}, {EndPoint})";
         }
 
     }

@@ -9,6 +9,7 @@ using WinFormsApp_OOP_2.Visitors;
 namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
 {
     //internal class Quadrilateral : Line, IFigure
+    [Serializable]
     public class Quadrilateral : Line, IFigure
     {
         public Quadrilateral() { }
@@ -26,6 +27,9 @@ namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
         {
             visitor.VisitQuadrilateral(this);
         }
-
+        public override string ToString()
+        {
+            return $"Quadrilateral ({StartPoint}, {EndPoint})";
+        }
     }
 }

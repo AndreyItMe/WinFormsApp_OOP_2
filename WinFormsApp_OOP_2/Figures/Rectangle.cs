@@ -13,8 +13,8 @@ namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
     {
         public Rectangle() { }
 
-        public new System.Drawing.Point StartPoint { get; set; }
-        public new System.Drawing.Point EndPoint { get; set; }
+        /*public new System.Drawing.Point StartPoint { get; set; }*/
+        /*public new System.Drawing.Point EndPoint { get; set; }*/
 
         public Rectangle(System.Drawing.Point startPoint, System.Drawing.Point endPoint)
         {
@@ -40,6 +40,9 @@ namespace WinFormsApp_OOP_1.GraphicsFigures.Figures
             
             visitor.VisitRectangle(this);
         }
-
+        public override string ToString()
+        {
+            return $"Rectangle ({StartPoint}, {EndPoint})";
+        }
     }
 }
